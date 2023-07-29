@@ -20,58 +20,6 @@
     --today: #D71D3B;
 }
 
-/*
-.fire {
-    --main-text: #fff;
-    --gray-text: #888;
-    --main-bg: #000;
-    --sunday: #D71D3B;
-    --saturday: #7FBFFF;
-    --holiday: #D71D3B;
-    --today: #D71D3B;
-}
-
-.water {
-    --main-text: #fff;
-    --gray-text: #888;
-    --main-bg: #000;
-    --sunday: #D71D3B;
-    --saturday: #7FBFFF;
-    --holiday: #D71D3B;
-    --today: #D71D3B;
-}
-
-.tree {
-    --main-text: #fff;
-    --gray-text: #888;
-    --main-bg: #000;
-    --sunday: #D71D3B;
-    --saturday: #7FBFFF;
-    --holiday: #D71D3B;
-    --today: #D71D3B;
-}
-
-.gold {
-    --main-text: #fff;
-    --gray-text: #888;
-    --main-bg: #000;
-    --sunday: #D71D3B;
-    --saturday: #7FBFFF;
-    --holiday: #D71D3B;
-    --today: #D71D3B;
-}
-
-.soil {
-    --main-text: #fff;
-    --gray-text: #888;
-    --main-bg: #000;
-    --sunday: #D71D3B;
-    --saturday: #7FBFFF;
-    --holiday: #D71D3B;
-    --today: #D71D3B;
-}
-*/
-
 body {
     background-color: var(--main-bg);
 }
@@ -168,10 +116,10 @@ td.today {
     padding: 0.5em 1em;
     margin: 0.5em 0;
     font-weight: bold;
-    color: var(--main-text);/*文字色*/
+    color: var(--main-text);
     background: var(--main-bg);
-    border: solid 3px var(--main-text);/*線*/
-    border-radius: 10px;/*角の丸み*/
+    border: solid 3px var(--main-text);
+    border-radius: 10px;
 }
 
 .box p {

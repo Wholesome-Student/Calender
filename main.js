@@ -5,18 +5,16 @@ var selected;
 var parent = document.getElementById("calendar");
 var cal;
 
-// 祝日取得
+/* 開始処理 */
 var request;
 window.onload = function () {
     request = new XMLHttpRequest();
     request.open("get", "https://holidays-jp.github.io/api/v1/date.csv", true);
     request.send(null);
     request.onload = function () {
-        // 初期表示
         showProcess(today, calendar);
     };
 };
-
 
 /* ボタン */
 // 前月
@@ -35,20 +33,27 @@ function next(){
     showProcess(showDate);
 }
 
+// 曜日
+function clickDoF(dof) {
+    const body = document.querySelector("body");
+    body.classList.remove(...body.classList);
+    if  (dof == "月") {
+        
+        body.classList.add("dark");
+    }
+}
+
+
 /* カレンダー表示 */
 function showProcess(date) {
     var year = date.getFullYear();
     var month = date.getMonth();
     document.querySelector("#header").innerHTML = year + "/" + (month + 1).toString().padStart(2, "0");
-    
-    
     if (parent.firstChild) {
         parent.removeChild(cal);
     }
-    
     cal = createProcess(year, month);
-    parent.appendChild(cal);
-    
+    parent.appendChild(cal);   
 }
 
 // カレンダー作成
@@ -148,36 +153,4 @@ function isHoliday(year, month, day) {
         }
     }
     return false;
-}
-
-
-function clickDoF(dof) {
-    const body = document.querySelector("body");
-    body.classList.remove(...body.classList);
-    if  (dof == "月") {
-        
-        body.classList.add("dark");
-    }
-    /*
-    else if (dof == "火") {
-        
-        body.classList.add("fire");
-    }
-    else if (dof == "水") {
-        
-        body.classList.add("water");
-    }
-    else if (dof == "木") {
-        
-        body.classList.add("tree");
-    }
-    else if (dof == "金") {
-        
-        body.classList.add("gold");
-    }
-    else if (dof == "土") {
-        
-        body.classList.add("soil");
-    }
-    */
 }
