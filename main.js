@@ -121,7 +121,7 @@ function createProcess(year, month) {
                     document.getElementById("date").textContent = ((month+1).toString().padStart(2, "0")+"/"+this.textContent.padStart(2, "0"));
                     var namestr = datename[(month+1).toString().padStart(2, "0")+this.textContent.padStart(2, "0")];
                     if (namestr == "") {
-                        document.getElementById("dayname").textContent = "";
+                        document.getElementById("dayname").textContent = "(データなし)";
                     }
                     else {
                         var namelist = namestr.split(",");
