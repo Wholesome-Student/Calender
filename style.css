@@ -1,0 +1,180 @@
+@charset "utf-8";
+
+:root {
+    --main-text: #333;
+    --gray-text: #888;
+    --main-bg: #FFF;
+    --sunday: red;
+    --saturday: blue;
+    --holiday: red;
+    --today: #FE7F9C;
+}
+
+.dark {
+    --main-text: #FFF;
+    --gray-text: #888;
+    --main-bg: #000;
+    --sunday: #D71D3B;
+    --saturday: #7FBFFF;
+    --holiday: #D71D3B;
+    --today: #D71D3B;
+}
+
+/*
+.fire {
+    --main-text: #fff;
+    --gray-text: #888;
+    --main-bg: #000;
+    --sunday: #D71D3B;
+    --saturday: #7FBFFF;
+    --holiday: #D71D3B;
+    --today: #D71D3B;
+}
+
+.water {
+    --main-text: #fff;
+    --gray-text: #888;
+    --main-bg: #000;
+    --sunday: #D71D3B;
+    --saturday: #7FBFFF;
+    --holiday: #D71D3B;
+    --today: #D71D3B;
+}
+
+.tree {
+    --main-text: #fff;
+    --gray-text: #888;
+    --main-bg: #000;
+    --sunday: #D71D3B;
+    --saturday: #7FBFFF;
+    --holiday: #D71D3B;
+    --today: #D71D3B;
+}
+
+.gold {
+    --main-text: #fff;
+    --gray-text: #888;
+    --main-bg: #000;
+    --sunday: #D71D3B;
+    --saturday: #7FBFFF;
+    --holiday: #D71D3B;
+    --today: #D71D3B;
+}
+
+.soil {
+    --main-text: #fff;
+    --gray-text: #888;
+    --main-bg: #000;
+    --sunday: #D71D3B;
+    --saturday: #7FBFFF;
+    --holiday: #D71D3B;
+    --today: #D71D3B;
+}
+*/
+
+body {
+    background-color: var(--main-bg);
+}
+
+/* 平日 */
+.wrapper{
+    max-width: 1000px;
+    margin: 0 auto;
+    color: var(--main-text);
+}
+
+/* 日付表示 */
+#header {
+    text-align: center;
+    font-size: 150%;
+    color: var(--gray-text);
+    width: 100%;
+    margin: 0rem 0 0;
+}
+
+/*カレンダー*/
+#calendar {
+    text-align: center;
+    width: 100%;
+    font-size: 30px
+}
+/* 外周 */
+table {
+    outline: 2px solid var(--main-text);
+    background-color: var(--main-bg);
+    border-collapse: collapse;
+    width: 100%;
+}
+th {
+    color: var(--main-text);
+}
+/* 罫線 */
+th, td {
+    outline: 1px solid var(--main-text);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+/*日曜日*/
+td:first-child {
+    color: var(--sunday);
+}
+/*土曜日*/
+td:last-child {
+    color: var(--saturday);
+}
+/*前後月の日付*/
+td.disabled {
+    color: var(--gray-text);
+}
+td.holiday{
+    color: var(--holiday);
+}
+/*本日*/
+td.today {
+    background-color: var(--today);
+    color: #fff;
+}
+
+/*ボタン*/
+#next-prev-button {
+    position: relative;
+}
+#next-prev-button button{
+    cursor: pointer;
+    background: var(--main-bg);
+    color: var(--main-text);
+    border: 2px solid var(--main-text);
+    border-radius: 6px;
+    font-size: 1.5rem;
+    padding: 0.5rem 2rem;
+    margin: 1rem 0;
+}
+
+#next-prev-button button:hover{
+    background-color: var(--gray-text);
+    border-color: var(--main-text);
+}
+
+#prev {
+    float: left;
+}
+
+#next {
+    float: right;
+}
+
+.box {
+    padding: 0.5em 1em;
+    margin: 0.5em 0;
+    font-weight: bold;
+    color: var(--main-text);/*文字色*/
+    background: var(--main-bg);
+    border: solid 3px var(--main-text);/*線*/
+    border-radius: 10px;/*角の丸み*/
+}
+
+.box p {
+    margin: 0; 
+    padding: 0;
+}

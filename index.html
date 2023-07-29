@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>カレンダー</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="datename.js" defer></script>
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <div class="wrapper">
+        <h1 id="header"></h1>
+        
+    
+        <div id="next-prev-button" style="text-align: center;">
+            <button id="prev" onclick="prev()">⇐</button>
+            <button id="now" onclick="now()">今月</button>
+            <button id="next" onclick="next()">⇒</button>
+        </div>
+
+        <div id="calendar"></div>
+    </div>
+    <div class="box">
+        <p id="date">--/--</p>
+        <p id="dayname">クリックすると記念日を表示</p>
+    </div>
+</body>
+</html>
